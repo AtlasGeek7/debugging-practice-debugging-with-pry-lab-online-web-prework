@@ -109,3 +109,47 @@ def snake_it_up(string)
   end
 end
 
+# the final frontier
+
+def generate_star_date
+  (rand(100000) + 400000) / 10.0
+end
+
+
+def state_log(star_date)
+  "Captain's Log, star date #{star_date}."
+end
+
+def crew
+  ["Geordi", "Data", "Worf", "William", "Beverly", "Deanna"]
+end
+
+def greet_crew (crew)
+  crew.each {|crew_member| "Hello #{crew_member}."}
+end
+
+def engage
+  date = generate_star_date
+  state_log(date)
+  greet_crew(crew)
+end
+
+# turtles_all_the_way
+
+
+def turtles
+    [
+      {name: "Donatello", weapon: "bo-staff", traits: ["serious", "leader"]},
+      {name: "Michaelangelo", weapon: "nunchuks", traits: "party dude"},
+      {name: "Raphael", weapon: "sais", traits: ["cool", "rude"]},
+      {name: "Leonardo", weapon: "katanas", traits: ["loves being a turtle"]}
+    ]
+end
+
+def turtle_traits(turtles)
+  turtles.map do |turtle|
+    turtle[:traits].each do |trait|
+      trait
+    end
+  end
+end
